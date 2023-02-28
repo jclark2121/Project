@@ -1,23 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Planning - Justin Clark</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Tangerine"
+    />
+    <title>WebTech HW 1 - Justin Clark</title>
     <style>
-        h1{
-            text-align: center;
+      img {
+        float: left;
+        height: 200px;
+        margin: 20px;
+        border-width: 2px;
+        border-style: solid;
+        border-color: black;
+      }
+      img#United {
+        height: 100px;
+      }
+      h1 {
+        font-family: sans-serif;
+        color: darkblue;
+        background-color: cadetblue;
+        text-align: center;
+      }
+      h3 {
+        font-family: cursive;
+        color: royalblue;
+        text-align: center;
+      }
+      h2 {
+        font-family: "Tangerine", serif;
+        color: rebeccapurple;
+        text-align: left;
+      }
+      p {
+        font-family: "Gill Sans", sans-serif;
+        color: slategrey;
+        font-size: 1.2em;
+        text-indent: 30px;
+      }
+      :any-link {
+        text-decoration: none;
+      }
+      a:link {
+        color: blue;
+      }
+      a:visited {
+        color: blue;
+      }
+      :any-link:hover {
+        color: lightslategray;
+      }
+      body {
+        background-color: beige;
+        margin-left: 120px;
+        margin-right: 120px;
+      }
+      h3 {
+        text-shadow: 1.75px 1.75px; /*This is the text shadow CSS property that applies shadow to text to give the text a more distorted look almost. I specified the dimensions just for the horizontal and vertical shadow. As a result, the text 'Contact Information' looks as though it has been written over itself. I learned this through W3 Schools. Credit: <https://www.w3schools.com/css/css3_shadows.asp>*/
+      }
+      li {
+        font-size: 1.2em;
+      }
+      @media screen and (min-width:700px) {
+        ul{
+          display: flex;
+          justify-content: space-between;
         }
-        img{
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-        }
+      } /*Attempt to adjust screen size for split screen or mobile view. I used "https://medium.com/geekculture/using-flexbox-to-create-navbar-to-fit-different-screens-eb43378bebcb" to try and figure out how to implement this, but could not find any combination that worked*/
+      .navbar {
+        background-color: lightblue;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        /* justify-content: flex-end; */
+        align-items: center;
+        padding: 5px;
+        margin: auto;
+        position: sticky;
+        align-self: flex-start;
+        top: 0; /* Last three inputs used to make the navbar stick to the top of the page*/
+      }
+      .dropbtn {
+        display: inline-block;
+        color: blue;
+        text-align: center;
+        /* padding: 10px; */
+      }
+      .dropdown {
+        display: inline-block;
+      }
+      .content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+      .content a {
+        color: black;
+        padding: 10px;
+        text-decoration: underline;
+        display: block;
+        text-align: left;
+      }
+      .content a:hover {
+        background-color: lightcyan;
+      }
+      .dropdown:hover .content {
+        display: block;
+      }
+      ul {
+        list-style-type: none;
+      }
     </style>
-</head>
-<body>
-    <h1>Initial Sketch</h1>
-    <img src="/projectimages/planning-sketch.png" alt="Sketch" height="800">
-</body>
+  </head>
+  <body>
+    <ul class="navbar">
+      <li><span>Justin Clark</span></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#Top">About Me</a></li>
+      <li><a href="#Middle">My Hobbies</a></li>
+      <li><a href="#End">Contact</a></li>
+      <li><a href="/sitemap.html">Portfolio</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Homework 2</a>
+        <div class="content">
+          <a href="/hw2-1.html">HW 2-1</a>
+          <a href="/hw2-2.html">HW 2-2</a>
+          <a href="/hw2-3.html">HW 2-3</a>
+          <a href="/hw2-4.html">HW 2-4</a>
+        </div>
+      </li>
+    </ul>
+    <hr />
+    <h2 id="Top">About Me</h2>
+    <p>
+      My name is Justin Clark and I am from Plainville, MA.
+      <img src="/images/Self-Soccer.jpg" alt="Picture of Me" id="Justin" /> I am
+      in the process of earning a bachelors degree in business administration
+      with a concentration in business operations at Babson College. While
+      attending college, I am also a part of the Babson club soccer team. I have
+      played soccer my whole life and it is one of my passions, so last summer
+      my brother and I started a coaching program that provided one on one
+      training to rising high school freshmen within our area. We worked on
+      fitness, technical skills, strategy and overall fundamentals to try and
+      prepare these kids as they prepared for higher level soccer. We have
+      continued to slowly grow and will be continuing this summer. If I am not
+      playing soccer, I will most likely be watching a movie or solving rubiks
+      cubes.
+    </p>
+    <p>
+      I chose <a href="https://www.babson.edu/">Babson College</a> because it
+      seemed like it provided the most real life experience out of any of the
+      other colleges I was considering. Additionally, Babson does not force one
+      subject down your throat, but instead immerses you in all aspects of
+      business. FME was a big selling point when deciding to come here, and I
+      was even more impressed when it came time to acutally undertake the FME
+      project. I chose to concentrate in operations because I feel as though it
+      is a versatile skill that can be used across any business segment, and it
+      allows for creativity in the workplace. After graduation, I hope to be
+      offered a full time position at my current company, and continue to work
+      within the business operations department.
+    </p>
+    <h2 id="Middle">My Hobbies</h2>
+    <p>
+      Some of my favorite hobbies include, as mentioned, playing soccer &amp;
+      watching movies. I also love solving
+      <a href="https://rubiks.com/en-US/">Rubiks</a> cubes. My favorite soccer
+      team is Manchester United, who are finally back to winning ways this
+      season, and my favorite player is Marcus Rashford.
+      <img
+        src="/images/Manchester_United_FC_crest.svg.png"
+        alt="United Symbol"
+        id="United"
+      />
+      In terms of movies I love sci-fi and fantasy; some of my favorite movies
+      are the Harry Potter series and the Star Wars series (Harry Potter &gt;
+      Star Wars). I also love the classics such as Goodfellas or Rocky. For
+      rubiks cubes, I have been solving them for quite some time, and can solve
+      from a 2x2 to a 5x5. Additionally, a few of my friends have started to get
+      into them, so I have also been teaching them over the past few days.
+    </p>
+    <hr />
+    <h3 id="End">Contact Information</h3>
+    Justin Clark
+    <br />OIM3690-03: WebTechnologies <br /><a
+      href="https://github.com/jclark2121"
+      >GitHub Profile</a
+    >
+    <br /><a href="mailto:jclark7@babson.edu">Email Me</a> <br /><a
+      href="/sitemap.html"
+      >Sitemap Link</a
+    >
+  </body>
 </html>
+<!--I, Justin Clark, pledge my honor that I have neither received nor provided unauthorized assistance during the completion of this work-->
