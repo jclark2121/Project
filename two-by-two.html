@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Rubik's, 3x3, 2x2, Cubing, Solving-cube" />
+    <meta
+      name="description"
+      content="Free solution guide for solving the 3x3 and 2x2 Rubik's Cubes"
+    />
+    <meta name="author" content="Justin Clark" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="heading.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Solving The 2x2</title>
+    <style>
+      h1,
+      h2 {
+        color: limegreen;
+      }
+      h2 {
+        text-align: center;
+      }
+      .first,
+      .final {
+        margin-left: 100px;
+        margin-right: 100px;
+        /* text-align: center; */
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: 20pt;
+        line-height: 1.6;
+      }
+      .two {
+        margin-left: auto;
+        margin-right: auto;
+        width: 450px;
+        border: 3pt solid black;
+      }
+      .caption {
+        text-align: center;
+        font-style: italic;
+        /* font-weight: bold; */
+      }
+      .algo {
+        font-weight: bolder;
+        text-align: center;
+      }
+      .first {
+        background-color: lightcyan;
+      }
+      .final {
+        background-color: lightgoldenrodyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="navbar">
+      <li>
+        <span
+          ><img src="/projectimages/logo-blue.png" alt="Logo" title="Logo"
+        /></span>
+      </li>
+      <li class="home"><a href="/index.html">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li class="lang"><a href="/language.html">Learning the Language</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Solving</a>
+        <div class="content">
+          <a href="/three-by-three.html">3x3</a>
+          <a href="/two-by-two.html">2x2</a>
+        </div>
+      </li>
+      <li class="fast"><a href="/faster.html">Getting Faster</a></li>
+      <li class="pats"><a href="/patterns.html">Patterns</a></li>
+      <li class="feed"><a href="/feedback.html">Contact & Feedback</a></li>
+      <li class="site"><a href="/sitemap.html">Sitemap</a></li>
+    </ul>
+    <h1>Solving The 2x2</h1>
+    <div class="first">
+      <p>
+        Compared to the 3x3, the 2x2 cube is much simpler. It has no middle
+        layer, and actually uses a few of the algorithms from the 3x3. Overall,
+        the idea of solving the 2x2 is very similar to the 3x3.
+      </p>
+      <p>
+        You first have to solve one side of the cube, which is a lot simpler
+        than the 3x3, and then you have to solve the top layer.
+      </p>
+      <h2>The First Side</h2>
+      <p>
+        As with the 3x3, there are no algorithms when solving the initial side
+        of the 2x2. The side has to be complete through logic, and with practice
+        it will become easier and easier.
+      </p>
+      <p>
+        Luckily, with no middle layer, solving the first side of the 2x2 is a
+        lot easier than solving a side on a 3x3.
+      </p>
+      <p>
+        As a tip, remember to align all the corner colors. We recommend solving
+        the white side first, as our examples will be based off this.
+      </p>
+      <p>
+        If you’ve completed the first side, your cube should look like the
+        picture below.
+      </p>
+      <img
+        src="/projectimages/2xWhite.jpg"
+        alt="White"
+        title="White"
+        class="two"
+      />
+      <p class="caption">Completed First Side</p>
+    </div>
+    <div class="final">
+      <h2>The Top Layer</h2>
+      <h4>Completing Yellow</h4>
+      <p>
+        After completing the initial side, we have to focus on completing the
+        top side, or in this case, the yellow side. The algorithm for this
+        section will have to be repeated multiple times to complete the cube.
+      </p>
+      <p class="algo">Yellow Top Algorithm: R’, U’, F’, U, F, R</p>
+      <p>
+        As mentioned, this algorithm will have to be repeated multiple times
+        depending on the layout of your top side. What matters most is how you
+        position your cube while performing this algorithm.
+      </p>
+      <p>
+        The following pictures show what your face side should be, depending on
+        the pattern on the top of your cube. If there are no yellow squares on
+        the top side, positioning does not matter.
+      </p>
+      <img
+        src="/projectimages/2xDiag.jpg"
+        alt="2-diag"
+        title="2-diag"
+        class="two"
+      />
+      <p class="caption">Diagonal Yellows</p>
+      <img
+        src="/projectimages/2xOutward.jpg"
+        alt="yc-outw"
+        title="yc-outw"
+        class="two"
+      />
+      <p class="caption">Yellow Corners Facing Outward</p>
+      <img
+        src="/projectimages/2xTopLeft.jpg"
+        alt="y-top-L"
+        title="y-top-L"
+        class="two"
+      />
+      <p class="caption">Single Yellow In Top Left</p>
+      <img
+        src="/projectimages/2xInverse.jpg"
+        alt="y-inver"
+        title="y-inver"
+        class="two"
+      />
+      <p class="caption">Inverse Bottom Yellows</p>
+      <p>The algorithm within all these scenarios remains the same.</p>
+      <h4>Final Steps</h4>
+      <p>
+        The final step in solving the 2x2 is to align the entire top layer,
+        while maintaining the completed yellow and white sides. There is only
+        one algorithm needed:
+      </p>
+      <p class="algo">
+        Final Steps Algorithm: R’, F, R’, B2, R, F’, R’, B2, R2
+      </p>
+      <p>
+        You may notice that this is one of the algorithms we used in solving the
+        3x3.
+      </p>
+      <p>
+        Positioning again comes into play here. If two colors line up to
+        complete a side (as pictured below), that side must be the backside of
+        the cube, or opposite of the face.
+      </p>
+      <img
+        src="/projectimages/2xStepFin.jpg"
+        alt="final-step"
+        title="final-step"
+        class="two"
+      />
+      <p class="caption">Red Positioned As Backside</p>
+      <p>
+        If no colors are lined up, positioning does not matter, however the
+        algorithm will have to be completed two times.
+      </p>
+      <img
+        src="/projectimages/2xFinished.jpg"
+        alt="Finished"
+        title="Finished"
+        class="two"
+      />
+      <p class="caption">
+        And that is all that is needed to complete a 2x2 cube!
+      </p>
+    </div>
+  </body>
+</html>

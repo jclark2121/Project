@@ -1,0 +1,29 @@
+.back-link {
+    text-decoration: underline;
+    font-size: 30pt;
+  }
+  .background-img {
+    margin: auto;
+    width: 1500px;
+    display: block;
+    z-index: -1;
+  }
+  #lang-back{
+    position: relative;
+    top: -550px;
+    left: 175px;
+  }
+  #three-back{
+    position: relative;
+    top: -547px;
+    right: -775px;
+  }
+  #about{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25pt;
+  }
+  p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20pt;
+    line-height: 1.6;
+  }

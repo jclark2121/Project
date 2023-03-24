@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Rubik's, 3x3, 2x2, Cubing, Solving-cube" />
+    <meta
+      name="description"
+      content="Free solution guide for solving the 3x3 and 2x2 Rubik's Cubes"
+    />
+    <meta name="author" content="Justin Clark" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="heading.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Solving The 3x3</title>
+    <style>
+      h1,
+      h2 {
+        color: blue;
+      }
+      h2 {
+        text-align: center;
+      }
+      .first,
+      .middle,
+      .final {
+        margin-left: 100px;
+        margin-right: 100px;
+        /* text-align: center; */
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: 20pt;
+        line-height: 1.6;
+      }
+      .three {
+        margin-left: auto;
+        margin-right: auto;
+        width: 450px;
+        border: 3pt solid black;
+      }
+      .caption {
+        text-align: center;
+        font-style: italic;
+        /* font-weight: bold; */
+      }
+      .tube {
+        display: flex;
+        justify-content: center;
+      }
+      .algo {
+        font-weight: bolder;
+        /* text-decoration: underline; */
+        text-align: center;
+      }
+      .first {
+        background-color: lightcyan;
+      }
+      .middle {
+        background-color: lavenderblush;
+      }
+      .final {
+        background-color: lightgoldenrodyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="navbar">
+      <li>
+        <span
+          ><img src="/projectimages/logo-blue.png" alt="Logo" title="Logo"
+        /></span>
+      </li>
+      <li class="home"><a href="/index.html">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li class="lang"><a href="/language.html">Learning the Language</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Solving</a>
+        <div class="content">
+          <a href="/three-by-three.html">3x3</a>
+          <a href="/two-by-two.html">2x2</a>
+        </div>
+      </li>
+      <li class="fast"><a href="/faster.html">Getting Faster</a></li>
+      <li class="pats"><a href="/patterns.html">Patterns</a></li>
+      <li class="feed"><a href="/feedback.html">Contact & Feedback</a></li>
+      <li class="site"><a href="/sitemap.html">Sitemap</a></li>
+    </ul>
+    <h1>Solving The 3x3</h1>
+    <div class="first">
+      <h2>The First Side</h2>
+      <p>
+        The overall idea when solving the original Rubik’s Cube (3x3) is to
+        solve it layer by layer. We start by solving one side (or layer) of the
+        cube. We then move towards solving the middle layer, and finish with
+        solving the top layer.
+      </p>
+      <p>
+        To start, we will be solving the white side of the cube. To solve the
+        first side of any cube, there are no real algorithms. It may be
+        difficult to understand the movements needed, but with enough practice,
+        everyone can solve the initial layer.
+      </p>
+      <p>
+        Again, there are no algorithms for the first layer, but these tips can
+        help.
+      </p>
+      <h4>Getting the Initial Cross</h4>
+
+      <img
+        src="/projectimages/white-cross.jpg"
+        alt="White Cross"
+        title="White Cross"
+        class="three"
+      />
+      <p class="caption">Initial Cross</p>
+      <p>
+        As seen in the picture, solving the first layer is a lot easier once you
+        get the initial cross done. For this first step, you should be focusing
+        on finding the white edges, and matching their opposing colors to the
+        center pieces of the cube. The blue and white edge should be lined up
+        with the blue and white center pieces, and the red and white edges
+        should match the red and white centers.
+      </p>
+      <p>
+        Next, we need to plug in the corners. For example, the white, green and
+        red corner has to line up with the white, green and red center and edge
+        pieces
+      </p>
+      <p>If you need help visualizing your moves, check out these videos.</p>
+      <div class="tube">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/wkyCH2DKCsQ"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        &nbsp;&nbsp;&nbsp;
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/EqLE2cFJFjI"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <p>
+        Again, with no algorithms it can be hard to solve the initial layer.
+        Through logic and practice, you’ll soon find that solving one side is
+        easier than it looks!
+      </p>
+
+      <img
+        src="/projectimages/white-side.jpg"
+        alt="White-side"
+        title="White-side"
+        class="three"
+      />
+      <p class="caption">Completed White Side</p>
+    </div>
+    <div class="middle">
+      <h2>The Middle Layer</h2>
+      <p>
+        After solving one layer, we have to move on to the middle layer. Within
+        this layer, you will be placing edges in the proper spaces in order to
+        get both the initial and middle layer to be matched up and completed.
+      </p>
+      <p>
+        This layer follows one algorithm, but you will need to position the
+        edges in the correct place before using the algorithm.
+      </p>
+
+      <img
+        src="/projectimages/middle-edge-right.jpg"
+        alt="Edge-Right"
+        title="Edge-Right"
+        class="three"
+      />
+      <p class="caption">Red and Blue Edge: Right</p>
+      <p>
+        Looking at the picture above, we will be using the blue and red edge for
+        our example. This edge piece needs to move into the middle slot, between
+        the blue and red center pieces.
+      </p>
+      <p>
+        Before getting into the algorithm, our blue and red edge needs to be
+        positioned as shown in the picture, with the blue side of the edge
+        lining up with the blue center piece.
+      </p>
+      <p>
+        Now since the red side is to the right of the blue side, and the blue
+        and red edge piece, we will use the Middle Right algorithm:
+      </p>
+      <p class="algo">Middle Right Algorithm: U, R, U’, R’, U’ F’, U, F</p>
+      <p>
+        After using this algorithm, your piece should be correctly placed, as
+        shown in the picture below
+      </p>
+      <img
+        src="/projectimages/middle-edge-placed.jpg"
+        alt="Edge-placed"
+        title="Edge-placed"
+        class="three"
+      />
+      <p class="caption">Middle Edge Alignment</p>
+      <p>
+        Edge pieces in the middle layer will either have to be moved to the
+        right (as shown above), or to the left. When moving an edge piece to the
+        left, we will be using the Middle Left algorithm. You should note that
+        this algorithm is the exact same as the Middle Right algorithm you’ve
+        already used, but just flipped.
+      </p>
+      <img
+        src="/projectimages/middle-edge-left.jpg"
+        alt="Edge-left"
+        title="Edge-left"
+        class="three"
+      />
+      <p class="caption">Orange and Green Edge: Left</p>
+      <p class="algo">Middle Left Algorithm: U’, L’, U, L, U, F, U’, F’</p>
+      <p>
+        These two algorithms should be repeated for all middle edge pieces,
+        until the middle layer and first layer are aligned and solved!
+      </p>
+      <img
+        src="/projectimages/middle-layer.jpg"
+        alt="middle-done"
+        title="middle-done"
+        class="three"
+      />
+    </div>
+    <div class="final">
+      <h2>The Final Layer</h2>
+      <p>
+        Our next algorithms are all aimed towards solving the yellow, or top,
+        side of the cube. There are only two algorithms to get the top layer,
+        but it is important to pay attention to positioning while solving this
+        section. Additionally, the two algorithms will be repeated multiple
+        times throughout this step.
+      </p>
+      <h4>Getting A Yellow Cross</h4>
+      <p>
+        After solving the middle layer, the top layer pieces can take many
+        different shapes. During some solves, you may have a yellow cross right
+        after completing the middle layer. However, there is a good chance that
+        your yellow cross is not yet formed.
+      </p>
+      <p>
+        If you do not have a yellow cross, you will have one of the three
+        following scenarios:
+      </p>
+      <img
+        src="/projectimages/yellow-center.jpg"
+        alt="y-dot"
+        title="y-dot"
+        class="three"
+      />
+      <p class="caption">Yellow Center Piece (Top Layer)</p>
+      <img
+        src="/projectimages/yellow-line.jpg"
+        alt="y-line"
+        title="y-line"
+        class="three"
+      />
+      <p class="caption">Yellow Line Across (Top Layer)</p>
+      <img
+        src="/projectimages/yellow-L.jpg"
+        alt="y-l"
+        title="y-l"
+        class="three"
+      />
+      <p class="caption">Yellow ‘L’ (Top Layer)</p>
+      <p>
+        For all of these situations, the algorithm remains the same. However,
+        the positioning of the cube is crucial. The pictures above capture the
+        top layer, and how each situation should be positioned if this was your
+        face.
+      </p>
+      <p>
+        However, the yellow side has to remain on the top throughout these final
+        steps. This means that the face of your cube should be blue, red, green,
+        or orange. The white and initial layer should remain on the bottom,
+        while the yellow layer remains on the top.
+      </p>
+      <p>Once positioned correctly, the algorithm is:</p>
+      <p class="algo">Yellow ‘L’ Algorithm: F, U, R, U’, R’, F’</p>
+      <h4>After The Cross</h4>
+      <p>
+        After getting the yellow cross, you may notice that there are many
+        different variations of what surrounds the core cross. In order to solve
+        the yellow side, you must repeat a simple algorithm (shown below), but
+        also must position the cube in the correct positions before doing so.
+      </p>
+      <p>
+        The following pictures show the different scenarios. As with the
+        previous section, these pictures show how the top layer is positioned;
+        the face of your cube should still be blue, red, green, or orange.
+      </p>
+      <img
+        src="/projectimages/yellow-cross.jpg"
+        alt="y-cross"
+        title="y-cross"
+        class="three"
+      />
+      <p class="caption">
+        Yellow Cross: The Yellow Sides of the Corners Should Be Facing Outwards
+      </p>
+      <img
+        src="/projectimages/yellow-fish.jpg"
+        alt="y-fish"
+        title="y-fish"
+        class="three"
+      />
+      <p class="caption">Fish: Bottom Left Corner Should Be Yellow</p>
+      <img
+        src="/projectimages/yellow-3-side.jpg"
+        alt="y-three-side"
+        title="y-three-side"
+        class="three"
+      />
+      <p class="caption">
+        Yellow-Three Side: The Three Yellow Pieces In A Row Should Be On Your
+        Right
+      </p>
+      <img
+        src="/projectimages/yellow-double-fish.jpg"
+        alt="y-dbl-fish"
+        title="y-dbl-fish"
+        class="three"
+      />
+      <p class="caption">
+        Double Fish: The Yellow Corners Placed In The Bottom Right And Top Left
+        Corners
+      </p>
+      <p>Once positioned correctly, perform the algorithm:</p>
+      <p class="algo">
+        Yellow Cross Scenarios Algorithm: R, U, R’, U, R, U, U, R’
+      </p>
+      <p>
+        This algorithm will have to be repeated until the yellow side is
+        completed. Each time you do the algorithm, you will get one of the
+        shapes shown above. Remember to position these shapes correctly.
+      </p>
+      <p>
+        Once you have fish, you will only have to complete the algorithm 1-2
+        more times, before solving the yellow side.
+      </p>
+      <h4>Setting Up the Final Steps</h4>
+      <p>
+        After completing the top, yellow side, you will notice that the edges
+        and corners of the yellow layer are still not aligned. Our next step is
+        to align these pieces, and complete the cube.
+      </p>
+      <p>
+        After completing the top, yellow side, you first line up the corners. If
+        two corners are already correctly placed, you have to position them to
+        align with their center color, as shown below.
+      </p>
+      <img
+        src="/projectimages/yellow-two-corners.jpg"
+        alt="y-two-crns"
+        title="y-two-crns"
+        class="three"
+      />
+      <p class="caption">
+        In This Example, The Blue Side Should Be Placed As The Back Side Of Your
+        Cube
+      </p>
+      <p>Once you have positioned the cube, perform the following algorithm</p>
+      <p class="algo">Run To Me Algorithm: R’, F, R’, B2, R, F’, R’, B2, R2</p>
+      <p>
+        If no corners were correctly positioned after completing the top, yellow
+        side, still perform the above algorithm, however the positioning is
+        inconsequential.
+      </p>
+      <h4>Final Steps</h4>
+      <p>
+        Our final step is to correct the positioning of the yellow edge pieces.
+      </p>
+      <img
+        src="/projectimages/final-step-1.jpg"
+        alt="f-step-1"
+        title="f-step-2"
+        class="three"
+      />
+      <p class="caption">Blue and Red Sides</p>
+      <img
+        src="/projectimages/final-step-2.jpg"
+        alt="f-step-2"
+        title="f-step-2"
+        class="three"
+      />
+      <p class="caption">Orange and Green Sides</p>
+      <p>
+        Your cube should resemble the pictures above. The cube is nearly
+        complete, however we have to reposition the yellow edges. As with the
+        previous step, if you have a side completely solved (similar to green in
+        the above picture), this side should be placed as the back side of the
+        cube.
+      </p>
+      <p>
+        There are two very similar algorithms in order to complete the puzzle.
+        The first algorithm is for a situation similar to the one shown in the
+        pictures above. As seen, the yellow and blue edge needs to move to the
+        right, aligning with the red side. In this situation, we will use the
+        Final Right algorithm.
+      </p>
+      <p class="algo">
+        Final Right Algorithm: F2, U’, R’, L, F2, R, L’, U’, F2
+      </p>
+      <p>
+        In the Opposite situation, when the middle edge has to move to the left,
+        the algorithm is:
+      </p>
+      <p class="algo">Final Right Algorithm: F2, U, R’, L, F2, R, L’, U, F2</p>
+      <p>
+        The only difference between these two is within the U turn. You turn the
+        U layer the same side as the edge needs to go.
+      </p>
+      <p>
+        If no side is completely finished after setting up the final step, still
+        perform the above algorithm, however the positioning is inconsequential.
+      </p>
+      <img
+        src="/projectimages/finished.jpg"
+        alt="Done"
+        title="Done"
+        class="three"
+      />
+      <p class="caption">Congratulations on solving your Rubik’s Cube!</p>
+    </div>
+  </body>
+</html>

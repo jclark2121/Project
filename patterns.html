@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Rubik's, 3x3, 2x2, Cubing, Solving-cube" />
+    <meta
+      name="description"
+      content="Free solution guide for solving the 3x3 and 2x2 Rubik's Cubes"
+    />
+    <meta name="author" content="Justin Clark" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="heading.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Patterns To Try</title>
+    <style>
+      h1,
+      h2 {
+        color: #ffd801;
+      }
+      h2 {
+        text-align: center;
+      }
+      .first,
+      .final {
+        margin-left: 100px;
+        margin-right: 100px;
+        /* text-align: center; */
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: 20pt;
+        line-height: 1.6;
+      }
+      .pat {
+        margin-left: auto;
+        margin-right: auto;
+        width: 450px;
+        border: 3pt solid black;
+      }
+      .algo {
+        font-weight: bolder;
+        text-align: center;
+      }
+      .first {
+        background-color: lightcyan;
+      }
+      .final {
+        background-color: lavenderblush;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="navbar">
+      <li>
+        <span
+          ><img src="/projectimages/logo-blue.png" alt="Logo" title="Logo"
+        /></span>
+      </li>
+      <li class="home"><a href="/index.html">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li class="lang"><a href="/language.html">Learning the Language</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Solving</a>
+        <div class="content">
+          <a href="/three-by-three.html">3x3</a>
+          <a href="/two-by-two.html">2x2</a>
+        </div>
+      </li>
+      <li class="fast"><a href="/faster.html">Getting Faster</a></li>
+      <li class="pats"><a href="/patterns.html">Patterns</a></li>
+      <li class="feed"><a href="/feedback.html">Contact & Feedback</a></li>
+      <li class="site"><a href="/sitemap.html">Sitemap</a></li>
+    </ul>
+    <h1>Patterns To Try</h1>
+    <div class="first">
+      <p>
+        Cube patterns are simply a fun way to rearrange your cube. In order for
+        these to work, your cube needs to be solved. We will show you a few of
+        our favorites and their subsequent algorithms for both the 2x2 and 3x3.
+        So have fun and show off to your friends!
+      </p>
+      <h2>2x2:Checkered</h2>
+      <img
+        src="/projectimages/2xCheck.jpg"
+        alt="two-check"
+        title="two-check"
+        class="pat"
+      />
+      <p class="algo">Algorithm: R2, F2, R2, U2</p>
+    </div>
+    <div class="final">
+      <h2>3x3:Checkered</h2>
+      <img
+        src="/projectimages/3xCheck.jpg"
+        alt="three-check"
+        title="three-check"
+        class="pat"
+      />
+      <p class="algo">Algorithm: R2, L2, U2, D2, F2, B2</p>
+      &nbsp;
+      <h2>3x3:Middle Swap</h2>
+      <img
+        src="/projectimages/3xMidSwap.jpg"
+        alt="Mid-swap"
+        title="Mid-swap"
+        class="pat"
+      />
+      <p class="algo">Algorithm: M’, E, M, E’</p>
+      &nbsp;
+      <h2>3x3:Cube in a Cube</h2>
+      <img
+        src="/projectimages/3xCubeIn.jpg"
+        alt="CinC"
+        title="CinC"
+        class="pat"
+      />
+      <p class="algo">
+        Algorithm: F, L, F, U’, R, U, F2, L2, U’, L’, B, D’, B’, L2, U
+      </p>
+      &nbsp;
+      <h2>3x3:Cube in a Cube in a Cube</h2>
+      <img
+        src="/projectimages/3xCubeInCube.jpg"
+        alt="CinCinC"
+        title="CinCinC"
+        class="pat"
+      />
+      <p class="algo">
+        Algorithm: U’, L’, U’, F’, R2, B’, R, F, U, B2, U, B’, L, U’, F, U, R,
+        F’
+      </p>
+    </div>
+  </body>
+</html>
