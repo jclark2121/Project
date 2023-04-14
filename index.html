@@ -10,37 +10,43 @@
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="home-backgr.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="footer.css">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
     <title>Cubes4Casuals - Home</title>
     <style>
-.one {
-        width: 20%;
-        font-weight: bold;
-        font-size: 0.75em;
+      html, body {
+        margin: 0;
+        padding: 0;
       }
-      .two {
-        width: 40%;
+      .home{
+        font-weight: bolder;
       }
-      .three {
-        width: 20%;
+      .slide-cont{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
       }
-      table {
-        margin-left: auto;
-        margin-right: auto;
-        /* border: 1px solid lightgrey; */
-        border-collapse: collapse;
+      #cube{
+        /* max-height: 100%; */
+        height: 70vh;
+        width: 1150px;
+        object-fit: cover;
+        object-position: center center;
       }
-      tr {
-        height: 20vh;
-        background-color: white;
+      #desc{
+        margin-top: 20px;
+        font-weight: bolder;
       }
-      .collection{
-        margin-left: auto;
-        margin-right: auto;
+      .logo{
+        display: flex;
+        justify-content: center;
+      }
+      #white-logo{
         width: 400px;
-        border: 3px solid black;
       }
     </style>
   </head>
@@ -48,11 +54,11 @@
     <ul class="navbar">
       <li>
         <span
-          ><img src="/projectimages/logo-blue.png" alt="Logo" title="Logo"
+          ><img src="/projectimages/logo-black.png" alt="Logo" title="Logo"
         /></span>
       </li>
       <li class="home"><a href="index.html">Home</a></li>
-      <li class="about"><a href="index.html#about">About</a></li>
+      <li class="about"><a href="about.html">About</a></li>
       <li class="lang"><a href="language.html">Learning the Language</a></li>
       <li class="dropdown">
         <a href="#" class="dropbtn">Solving</a>
@@ -66,21 +72,64 @@
       <li class="feed"><a href="feedback.html">Contact & Feedback</a></li>
       <li class="site"><a href="sitemap.html">Sitemap</a></li>
     </ul>
-    <img class="background-img" src="/projectimages/main-background.png" alt="">
-    <a id="lang-back" class="back-link" href="/language.html">Learn the Language</a>
-    <a id="three-back" class="back-link" href="/three-by-three.html">Start Solving</a>
-    <table>
-      <caption id="about">
-        About Us
-      </caption>
-      <tr>
-        <td class="one"><img class="collection" src="/projectimages/collection.jpg" alt="Collection" title="Collection"></td>
-        <td class="two"><p>Cubes4Casuals is the perfect place for learning more about Rubik’s cubes! Our site was created out of a strong passion for cubing, and a desire to share this passion with others. 
-    <p>As our name suggests, our site is more directed towards beginners. We offer introductory solutions and guides for two different cubes (2x2 and 3x3). <p>We also offer tips and tricks towards getting faster in your solves, once you’ve mastered the basics.
-      You can find cool patterns to try and to show off, and video tutorials all throughout the site. We recommend learning the language first for all newcomers. Enjoy our site!</p>
-      </p></p>
-        </td>
-        <td class="three"><img class="collection" src="/projectimages/pattern-collection.jpg" alt="Pattern-Coll" title="Pattern-Coll"></td></table>
+    <!-- <div class="logo">
+      <img id="white-logo" src="/projectimages/logo-white.png" alt="Logo-wht" title="Logo-wht">
+    </div> -->
+    <div class="slide-cont">
+    <p>
+      <img
+        id="cube"
+        src="projectimages/slide01.jpg"
+        alt="Slide Show of Cubes"
+        title="Cubes"
+      />
+    </p>
+    <p id="desc"></p></div>
+  </body>
+
+  <script>
+    const SLIDES = [
+      "projectimages/slide01.jpg",
+      "projectimages/slide02.jpg",
+      "projectimages/slide03.jpg",
+    ];
+    const COLORS = ["blue", "red", "green"];
+    const DESCRIPTIONS = [
+      "Learn The Cubing Language",
+      "Learn How To Solve A Cube",
+      "Get Faster",
+    ];
+
+    let index = 0;
+
+    const rubiksImageEl = document.getElementById("cube");
+    const descriptionEl = document.getElementById("desc");
+
+    function slideShow() {
+      if (index == SLIDES.length) {
+        index = 0;
+      }
+      rubiksImageEl.src = SLIDES[index];
+      rubiksImageEl.style.border = `5px solid ${COLORS[index]}`;
+      // rubiksImageEl.style.width = "1150px";
+      descriptionEl.textContent = DESCRIPTIONS[index];
+
+      index++;
+      setTimeout(slideShow, 3000);
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      slideShow();
+    });
+    // document.querySelector("body").onload = function(){
+    //     slideShow()
+    // };
+  </script>
+  <footer>
+    <p class="foots">Cubes4Casuals | Justin Clark
+      <a id="foot-site" href="/sitemap.html">Sitemap</a>
+    </p>
+  </footer>
     
   </body>
 </html>

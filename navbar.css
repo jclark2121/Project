@@ -2,15 +2,15 @@
     text-decoration: none;
   }
   a:link {
-    color: blue;
+    color: white;
   }
   a:visited {
-    color: blue;
+    color: white;
   }
   :any-link:hover {
     color: lightslategray;
   }.navbar {
-    background-color: lightskyblue;
+    background-color: black;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -23,7 +23,7 @@
   }
   .dropbtn {
     display: inline-block;
-    color: blue;
+    color: grey;
     text-align: center;
     /* padding: 10px; */
   }
@@ -52,7 +52,7 @@
     text-align: left;
   }
   .content a:hover {
-    background-color: lightcyan;
+    background-color: lightgrey;
   }
   span{
     color: crimson;

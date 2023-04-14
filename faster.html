@@ -18,6 +18,11 @@
     <link rel="manifest" href="/site.webmanifest" />
     <title>Getting Faster</title>
     <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
       h1,
       h2 {
         color: orange;
@@ -66,17 +71,20 @@
         display: block;
         margin: 0 auto;
       }
+      .fast{
+        font-weight: bolder;
+      }
     </style>
   </head>
   <body>
     <ul class="navbar">
       <li>
         <span
-          ><img src="/projectimages/logo-blue.png" alt="Logo" title="Logo"
+          ><img src="/projectimages/logo-black.png" alt="Logo" title="Logo"
         /></span>
       </li>
       <li class="home"><a href="/index.html">Home</a></li>
-      <li><a href="/index.html#about">About</a></li>
+      <li><a href="about.html">About</a></li>
       <li class="lang"><a href="/language.html">Learning the Language</a></li>
       <li class="dropdown">
         <a href="#" class="dropbtn">Solving</a>
@@ -171,5 +179,6 @@
         <a href="https://jperm.net/algs/pll">PLL.</a>
       </p>
     </div>
+    
   </body>
 </html>

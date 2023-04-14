@@ -17,6 +17,11 @@
     <link rel="manifest" href="/site.webmanifest" />
     <title>Sitemap</title>
     <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
       table {
         margin-left: auto;
         margin-right: auto;
@@ -47,17 +52,29 @@
         display: flex;
         justify-content: space-evenly;
       }
+      .container a:link {
+        color: blue;
+      }
+      .container a:visited {
+        color: blue;
+      }
+      .container a:hover {
+        color: lightskyblue;
+      }
+      .site{
+        font-weight: bolder;
+      }
     </style>
   </head>
   <body>
     <ul class="navbar">
       <li>
         <span
-          ><img src="/projectimages/logo-blue.png" alt="Logo" title="Logo"
+          ><img src="/projectimages/logo-black.png" alt="Logo" title="Logo"
         /></span>
       </li>
       <li class="home"><a href="/index.html">Home</a></li>
-      <li><a href="/index.html#about">About</a></li>
+      <li><a href="about.html">About</a></li>
       <li class="lang"><a href="/language.html">Learning the Language</a></li>
       <li class="dropdown">
         <a href="#" class="dropbtn">Solving</a>
@@ -80,7 +97,7 @@
             <ul>
               About Cubes4Casuals
               <li><a href="/index.html">Homepage</a></li>
-              <li><a href="/index.html#about">About Us</a></li>
+              <li><a href="about.html">About Us</a></li>
               <li><a href="/feedback.html">Contact Form</a></li>
             </ul>
           </li>
@@ -127,5 +144,6 @@
         </ul>
       </div>
     </div>
+    
   </body>
 </html>
