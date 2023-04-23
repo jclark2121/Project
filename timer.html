@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>hw4-5</title>
+    <title>Timer</title>
     <link rel="stylesheet" href="heading.css">
     <link rel="stylesheet" href="navbar.css">
     <style>
@@ -63,10 +63,9 @@
       <li class="site"><a href="sitemap.html">Sitemap</a></li>
     </ul>
     <h1 id="my-head">Rubik's Cube Timer</h1>
-    <br />
     <p>Click the space bar to start and stop the timer</p>
-    <br />
     <p id="scramble">Random Scramble:</p>
+    <p id="average">Session Average:</p>
     <div class="container">
       <div id="timer">00:00,00</div>
     </div>
@@ -113,6 +112,22 @@
       clearInterval(interval);
       interval = null;
       times.push(timePassed); //this will bring the times into the empty array
+      average();
+    }
+
+    function average() {
+      let totalTime = 0;
+      for (i = 0; i < times.length; i++) {
+        totalTime += times[i];
+      }
+      const sessionAverage = Math.floor(totalTime / times.length);
+      const averageMinutes = format(Math.floor(sessionAverage / 60000));
+      const averageSeconds = format(
+        Math.floor((sessionAverage % 60000) / 1000)
+      );
+      const averageMilliseconds = format(sessionAverage % 1000);
+      const averageForm = `${averageMinutes}:${averageSeconds},${averageMilliseconds}`;
+      averageEl.innerHTML = "Session Average: " + averageForm;
     }
 
     function format(number) {
