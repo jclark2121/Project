@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>hw4-5</title>
+    <link rel="stylesheet" href="heading.css">
+    <link rel="stylesheet" href="navbar.css">
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #my-head {
+        color: red;
+      }
+      p {
+        display: flex;
+        justify-content: center;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: 20pt;
+        line-height: 1.6;
+      }
+      .container {
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #timer {
+        font-size: 5em;
+        color: black;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      }
+      .timer{
+        font-weight: bolder;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="navbar">
+      <li>
+        <span
+          ><img src="/projectimages/logo-black.png" alt="Logo" title="Logo"
+        /></span>
+      </li>
+      <li class="home"><a href="index.html">Home</a></li>
+      <li class="about"><a href="about.html">About</a></li>
+      <li class="lang"><a href="language.html">Learning the Language</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Solving</a>
+        <div class="content">
+          <a href="three-by-three.html">3x3</a>
+          <a href="two-by-two.html">2x2</a>
+        </div>
+      </li>
+      <li class="fast"><a href="faster.html">Getting Faster</a></li>
+      <li class="pats"><a href="patterns.html">Patterns</a></li>
+      <li class="timer"><a href="timer.html">Timer</a></li>
+      <li class="feed"><a href="feedback.html">Contact & Feedback</a></li>
+      <li class="site"><a href="sitemap.html">Sitemap</a></li>
+    </ul>
+    <h1 id="my-head">Rubik's Cube Timer</h1>
+    <br />
+    <p>Click the space bar to start and stop the timer</p>
+    <br />
+    <p id="scramble">Random Scramble:</p>
+    <div class="container">
+      <div id="timer">00:00,00</div>
+    </div>
+  </body>
+  <script>
+    const timerEl = document.querySelector("#timer");
+    let timePassed = 0;
+    let startTime;
+    let interval;
+    let times =[]; //empty array will store the times that are needed to get an average
+    const SCRAMBLE = [
+      "U",
+      "D",
+      "R",
+      "L",
+      "F",
+      "B",
+      "U'",
+      "D'",
+      "R'",
+      "L'",
+      "F'",
+      "B'",
+    ];
+    const scrambleEl = document.getElementById("scramble");
+    const averageEl = document.getElementById("average");
+
+    function getTime() {
+      const minutes = format(Math.floor(timePassed / 60000));
+      const seconds = format(Math.floor((timePassed % 60000) / 1000));
+      const milliseconds = format(timePassed % 1000);
+      timerEl.innerText = `${minutes}:${seconds},${milliseconds}`;
+    }
+
+    function timerStart() {
+      startTime = Date.now();
+      interval = setInterval(function () {
+        timePassed = Date.now() - startTime;
+        getTime();
+      }, 100); //Number of milliseconds before calling the function. I'd like it lower, but timer is just too shaky when working that fast.
+    }
+
+    function timerStop() {
+      clearInterval(interval);
+      interval = null;
+      times.push(timePassed); //this will bring the times into the empty array
+    }
+
+    function format(number) {
+      if (number < 10) {
+        return "0" + number;
+      } else {
+        return number.toString();
+      }
+    }
+
+    function scramble() {
+      const randomMove1 = SCRAMBLE[Math.floor(Math.random() * SCRAMBLE.length)];
+      const randomMove2 = SCRAMBLE[Math.floor(Math.random() * SCRAMBLE.length)];
+      const randomMove3 = SCRAMBLE[Math.floor(Math.random() * SCRAMBLE.length)];
+      const randomMove4 = SCRAMBLE[Math.floor(Math.random() * SCRAMBLE.length)];
+      const randomMove5 = SCRAMBLE[Math.floor(Math.random() * SCRAMBLE.length)];
+      const randomMove6 = SCRAMBLE[Math.floor(Math.random() * SCRAMBLE.length)];
+      const randomMove7 = SCRAMBLE[Math.floor(Math.random() * SCRAMBLE.length)];
+      const randomMove8 = SCRAMBLE[Math.floor(Math.random() * SCRAMBLE.length)];
+      const randomMove9 = SCRAMBLE[Math.floor(Math.random() * SCRAMBLE.length)];
+      const randomMove10 =
+        SCRAMBLE[Math.floor(Math.random() * SCRAMBLE.length)];
+      const randomMove11 =
+        SCRAMBLE[Math.floor(Math.random() * SCRAMBLE.length)];
+      const randomMove12 =
+        SCRAMBLE[Math.floor(Math.random() * SCRAMBLE.length)];
+      const randomMove13 =
+        SCRAMBLE[Math.floor(Math.random() * SCRAMBLE.length)];
+      const randomMove14 =
+        SCRAMBLE[Math.floor(Math.random() * SCRAMBLE.length)];
+      const randomMove15 =
+        SCRAMBLE[Math.floor(Math.random() * SCRAMBLE.length)];
+      const randomMove16 =
+        SCRAMBLE[Math.floor(Math.random() * SCRAMBLE.length)];
+      const randomMove17 =
+        SCRAMBLE[Math.floor(Math.random() * SCRAMBLE.length)];
+      const randomMove18 =
+        SCRAMBLE[Math.floor(Math.random() * SCRAMBLE.length)];
+      const randomMove19 =
+        SCRAMBLE[Math.floor(Math.random() * SCRAMBLE.length)];
+      const randomMove20 =
+        SCRAMBLE[Math.floor(Math.random() * SCRAMBLE.length)];
+
+      scrambleEl.innerHTML =
+        "Random Scramble: " +
+        randomMove1 +
+        "&nbsp" +
+        randomMove2 +
+        "&nbsp" +
+        randomMove3 +
+        "&nbsp" +
+        randomMove4 +
+        "&nbsp" +
+        randomMove5 +
+        "&nbsp" +
+        randomMove6 +
+        "&nbsp" +
+        randomMove7 +
+        "&nbsp" +
+        randomMove8 +
+        "&nbsp" +
+        randomMove9 +
+        "&nbsp" +
+        randomMove10 +
+        "&nbsp" +
+        randomMove11 +
+        "&nbsp" +
+        randomMove12 +
+        "&nbsp" +
+        randomMove13 +
+        "&nbsp" +
+        randomMove14 +
+        "&nbsp" +
+        randomMove15 +
+        "&nbsp" +
+        randomMove16 +
+        "&nbsp" +
+        randomMove17 +
+        "&nbsp" +
+        randomMove18 +
+        "&nbsp" +
+        randomMove19 +
+        "&nbsp" +
+        randomMove20;
+    }
+
+    document.addEventListener("keydown", function (event) {
+      if (event.code === "Space") {
+        if (!interval) {
+          timerPassed = 0;
+          timerStart();
+        } else {
+          timerStop();
+          scramble();
+        }
+      }
+    });
+  </script>
+</html>
