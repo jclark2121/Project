@@ -46,7 +46,7 @@
       .extra {
         color: darkblue;
       }
-      .feed{
+      .feed {
         font-weight: bolder;
       }
     </style>
@@ -74,7 +74,7 @@
       <li class="feed"><a href="/feedback.html">Contact & Feedback</a></li>
       <li class="site"><a href="/sitemap.html">Sitemap</a></li>
     </ul>
-    <h1>Contact &amp; Feedback</h1>
+    <h1 id="change">Contact &amp; Feedback</h1>
     <form action="https://oim-apis.up.railway.app/form2" method="post">
       <div>
         <label for="lname">Last Name:</label>
@@ -177,6 +177,40 @@
       <button type="reset">Reset</button>
       <!-- <input type="submit"> -->
     </form>
-    
+    <script src="browser-stor.js"></script>
+    <script src="heading.js"></script>
+    <script>
+      const fNameText = document.getElementById("fname");
+      const lNameText = document.getElementById("lname");
+      const emailText = document.getElementById("emaddress");
+      function validateFirst() {
+        const fName = fNameText.value;
+        const keyCode = event.keyCode || event.which;
+        if (keyCode !== 8 && (keyCode < 65 || keyCode > 90)) {
+          event.preventDefault();
+          alert("Invalid: Input must be a letter.");
+          return;
+        }
+      }
+      function validateSecond() {
+        const lName = lNameText.value;
+        if (keyCode !== 8 && (keyCode < 65 || keyCode > 90)) {
+          event.preventDefault();
+          alert("Invalid: Input must be a letter.");
+          return;
+        }
+      }
+      function validateThird() {
+        const eMail = emailText.value;
+        if (keyCode !== 8 && (keyCode < 65 || keyCode > 90)) {
+          event.preventDefault();
+          alert("Invalid: Input must be a letter.");
+          return;
+        }
+      }
+      fNameText.addEventListener("keydown", validateFirst);
+      lNameText.addEventListener("keydown", validateSecond);
+      emailText.addEventListener("keydown", validateThird);
+    </script>
   </body>
 </html>

@@ -74,6 +74,17 @@
       .fast {
         font-weight: bolder;
       }
+      a[href*="oll"],
+      a[href*="pll"] {
+        color: blue;
+      }
+      iframe {
+        transition: transform 0.3s ease;
+      }
+
+      iframe:hover {
+        transform: scale(1.14);
+      }
     </style>
   </head>
   <body>
@@ -99,7 +110,7 @@
       <li class="feed"><a href="/feedback.html">Contact & Feedback</a></li>
       <li class="site"><a href="/sitemap.html">Sitemap</a></li>
     </ul>
-    <h1>Getting Faster</h1>
+    <h1 id="change">Getting Faster</h1>
     <div class="tube">
       <iframe
         width="560"
@@ -177,9 +188,11 @@
       </p>
       <p>
         These links are two great resources that show the algorithms for
-        <a href="https://jperm.net/algs/oll">OLL</a> and
-        <a href="https://jperm.net/algs/pll">PLL.</a>
+        <a class="olpl" href="https://jperm.net/algs/oll">OLL</a> and
+        <a class="olpl" href="https://jperm.net/algs/pll">PLL.</a>
       </p>
     </div>
+    <script src="browser-stor.js"></script>
+    <script src="heading.js"></script>
   </body>
 </html>

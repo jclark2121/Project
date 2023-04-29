@@ -63,7 +63,6 @@
       }
       .first {
         background-color: lightcyan;
-        
       }
       .middle {
         background-color: lavenderblush;
@@ -71,8 +70,14 @@
       .final {
         background-color: lightgoldenrodyellow;
       }
-      .dropdown{
+      .dropdown {
         font-weight: bolder;
+      }
+      iframe {
+        transition: transform 0.3s ease;
+      }
+      iframe:hover {
+        transform: scale(1.14);
       }
     </style>
   </head>
@@ -99,7 +104,7 @@
       <li class="feed"><a href="/feedback.html">Contact & Feedback</a></li>
       <li class="site"><a href="/sitemap.html">Sitemap</a></li>
     </ul>
-    <h1>Solving The 3x3</h1>
+    <h1 id="change">Solving The 3x3</h1>
     <div class="first">
       <h2>The First Side</h2>
       <p>
@@ -447,6 +452,7 @@
       />
       <p class="caption">Congratulations on solving your Rubik’s Cube!</p>
     </div>
-    
+    <script src="browser-stor.js"></script>
+    <script src="heading.js"></script>
   </body>
 </html>

@@ -1,0 +1,28 @@
+@media screen and (max-width: 768px) {
+    /* Hide the navigation links */
+    .navbar li {
+      display: none;
+    }
+    /* Show the dropdown button */
+    .navbar .dropdown {
+      display: block;
+    }
+    /* Display the dropdown content vertically */
+    .navbar .dropdown .content {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    /* Add some space between the dropdown links */
+    .navbar .dropdown .content a {
+      margin: 10px 0;
+    }
+    /* Adjust the cube image width */
+    #cube {
+      width: 100%;
+      height: auto;
+    }
+    /* Adjust the logo size */
+    .logo img {
+      max-width: 80%;
+    }
+  }

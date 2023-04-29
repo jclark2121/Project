@@ -1,0 +1,24 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  table {
+    display: block;
+  }
+  td {
+    display: block;
+  }
+  .collection {
+    width: 100%;
+  }
+  .one,
+  .two,
+  .three {
+    width: 100%;
+  }
+}

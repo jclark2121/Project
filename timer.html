@@ -3,16 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Rubik's, 3x3, 2x2, Cubing, Solving-cube" />
+    <meta
+      name="description"
+      content="Free solution guide for solving the 3x3 and 2x2 Rubik's Cubes"
+    />
+    <meta name="author" content="Justin Clark" />
     <title>Timer</title>
-    <link rel="stylesheet" href="heading.css">
-    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="heading.css" />
+    <link rel="stylesheet" href="navbar.css" />
     <style>
       html,
       body {
         margin: 0;
         padding: 0;
       }
-      #my-head {
+      .my-head {
         color: red;
       }
       p {
@@ -34,7 +41,7 @@
         color: black;
         font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
       }
-      .timer{
+      .timer {
         font-weight: bolder;
       }
     </style>
@@ -62,7 +69,7 @@
       <li class="feed"><a href="feedback.html">Contact & Feedback</a></li>
       <li class="site"><a href="sitemap.html">Sitemap</a></li>
     </ul>
-    <h1 id="my-head">Rubik's Cube Timer</h1>
+    <h1 class="my-head" id="change">Rubik's Cube Timer</h1>
     <p>Click the space bar to start and stop the timer</p>
     <p id="scramble">Random Scramble:</p>
     <p id="average">Session Average:</p>
@@ -70,12 +77,13 @@
       <div id="timer">00:00,00</div>
     </div>
   </body>
+  <script src="browser-stor.js"></script>
   <script>
     const timerEl = document.querySelector("#timer");
     let timePassed = 0;
     let startTime;
     let interval;
-    let times =[]; //empty array will store the times that are needed to get an average
+    let times = []; //empty array will store the times that are needed to get an average
     const SCRAMBLE = [
       "U",
       "D",
@@ -226,4 +234,5 @@
       }
     });
   </script>
+  <script src="heading.js"></script>
 </html>

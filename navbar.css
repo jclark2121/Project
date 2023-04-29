@@ -67,3 +67,76 @@
     display: flex;
     justify-content: center;
   }
+  .navbar {
+    background-color: black;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin: auto;
+    position: sticky;
+    align-self: flex-start;
+    top: 0;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 5px;
+    }
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+    flex-basis: 30%;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .logo {
+      flex-basis: auto;
+      margin-bottom: 10px;
+    }
+  }
+  .dropbtn {
+    display: inline-block;
+    color: grey;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .dropbtn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 10px;
+      font-size: 1.2rem;
+      line-height: 2rem;
+    }
+  
+    .dropbtn::after {
+      content: "\25BE";
+      font-size: 1.5rem;
+      color: white;
+    }
+  }
+  .navbar li {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    flex-basis: 15%;
+    text-align: center;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .navbar li {
+      flex-basis: auto;
+      margin-bottom: 10px;
+    }
+  }
+  
